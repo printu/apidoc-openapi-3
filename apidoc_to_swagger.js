@@ -77,13 +77,13 @@ function mapHeaderItem(i) {
     return {
         schema: {
             type: 'string',
-            default: i.defaultValue
+            example: i.defaultValue
         },
         in: 'header',
         name: i.field,
         description: removeTags(i.description),
         required: !i.optional,
-        default: i.defaultValue
+        example: i.defaultValue
     }
 }
 
@@ -91,7 +91,7 @@ function mapQueryItem(i) {
     return {
         schema: {
             type: 'string',
-            default: i.defaultValue
+            example: i.defaultValue
         },
         in: 'query',
         name: i.field,
@@ -104,7 +104,7 @@ function mapPathItem(i) {
     return {
         schema: {
             type: 'string',
-            default: i.defaultValue
+            example: i.defaultValue
         },
         in: 'path',
         name: i.field,

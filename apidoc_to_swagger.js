@@ -301,7 +301,7 @@ function generateResponse(example, responses) {
     responses[code] = {
         content: {
             'application/json': {
-                example: example.content,
+                example: json,
                 schema
             }
         },

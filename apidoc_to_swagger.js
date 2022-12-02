@@ -195,6 +195,7 @@ function generateProps(verb) {
     const responses = generateResponses(verb)
     pathItemObject[verb.type] = {
         tags: [verb.group],
+        operationId: removeTags(verb.name),
         summary: removeTags(verb.name),
         description: removeTags(verb.title || '') + (verb.description ? ' - ' + removeTags(verb.description) : ''),
         parameters,

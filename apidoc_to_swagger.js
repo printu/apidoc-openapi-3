@@ -289,6 +289,14 @@ function generateResponses(verb) {
                 }
             }
         }
+    } else if (code2xx === '202') {
+        responses[204] = {
+            description: "Accepted"
+        }
+    } else if (code2xx === '204') {
+        responses[204] = {
+            description: "No Content"
+        }
     }
 
     mountResponseSpecSchema(verb, responses, code2xx)
